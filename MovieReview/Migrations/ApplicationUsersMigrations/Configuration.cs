@@ -1,4 +1,4 @@
-namespace MovieReview.Migrations
+namespace MovieReview.Migrations.ApplicationUsersMigrations
 {
     using System;
     using System.Data.Entity;
@@ -10,6 +10,7 @@ namespace MovieReview.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            MigrationsDirectory = @"Migrations/ApplicationUsersMigrations";
         }
 
         protected override void Seed(MovieReview.Models.ApplicationDbContext context)

@@ -1,0 +1,21 @@
+﻿
+﻿--------------------------------------------------------------------------------------------------------------------------------
+First 
+enable migrations for a certain context in a certain folder
+
+Enable-Migrations -ContextTypeName MovieReview.Models.ApplicationDbContext -MigrationsDirectory Migrations/ApplicationUsersMigrations
+Enable-Migrations -ContextTypeName MovieReview.Models.MovieDbContext -MigrationsDirectory Migrations/MovieMigrations
+
+--------------------------------------------------------------------------------------------------------------------------------
+Second 
+Add migrations and update database
+
+for the main migration
+add-Migration -ConfigurationTypeName MovieReview.Migrations.ApplicationUsersMigrations.Configuration
+update-database -ConfigurationTypeName MovieReview.Migrations.ApplicationUsersMigrations.Configuration
+
+for a certain migration
+add-Migration -ConfigurationTypeName MovieReview.Migrations.MovieMigrations.Configuration
+update-database -ConfigurationTypeName MovieReview.Migrations.MovieMigrations.Configuration
+
+--------------------------------------------------------------------------------------------------------------------------------

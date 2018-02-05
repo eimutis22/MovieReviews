@@ -1,5 +1,4 @@
-﻿using MovieReview.Migrations;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -19,3 +18,5 @@ namespace MovieReview.Models
         public DbSet<Review> Reviews { get; set; }
     }
 }
+
+
