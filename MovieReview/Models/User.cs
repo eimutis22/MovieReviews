@@ -26,5 +26,7 @@ namespace MovieReview.Models
 
         [Display(Name = "Email")]
         public int Email { get; set; }
+
+        public virtual ICollection<Review> Reviews { get; set; }
     }
 }
